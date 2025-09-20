@@ -164,7 +164,7 @@ export default function Home() {
 
             <div className="w-full grid [grid-template-rows:auto_auto_auto] grid-cols-1 gap-2 py-12">
               <div className="gap-2 flex items-stretch justify-between">
-                <Link href="https://cytora.wpengine.com/" className='p-2 border-1 border-[#ffffff14] rounded-2xl bg-[#101010 flex flex-col relative] w-full'>
+                <Link href="https://cytora.wpengine.com/" target="_blank" className='p-2 border-1 border-[#ffffff14] rounded-2xl bg-[#101010 flex flex-col relative] w-full'>
                   <div className="bg-[#101010] text-[#f8f8f8] rounded-xl flex flex-col h-full relative overflow-hidden">
                     <div className='w-full h-[559px] relative'>
                       <Image src='/2.png' fill alt="1" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2"/> 
