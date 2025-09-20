@@ -3,6 +3,8 @@
 import { Manrope } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const manrope = Manrope({
     weight: ["200", "300", "400", "500", "600", "700", "800"],
@@ -22,6 +24,8 @@ export default function RootLayout({
         <div className="mt-2.5">
           <Navbar />
           {children}
+          <Analytics />
+          <SpeedInsights />
         </div>
       </body>
     </html>
