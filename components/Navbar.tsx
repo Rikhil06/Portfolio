@@ -7,7 +7,7 @@ export default function Navbar() {
     const pathname = usePathname();
     const router = useRouter();
 
-  const scrollToSection = (id: any) => {
+  const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (!element) return;
 

@@ -38,9 +38,9 @@ const accordionData = [
 ];
 
 export default function Accordion() {
-  const [openId, setOpenId] = useState(null);
+  const [openId, setOpenId] = useState<number | null>(null);
 
-  const toggleAccordion = (id: any) => {
+  const toggleAccordion = (id: number) => {
     setOpenId(openId === id ? null : id);
   };
 
@@ -54,7 +54,7 @@ export default function Accordion() {
           >
             <h3
               onClick={() => toggleAccordion(item.id)}
-              className="flex justify-between items-center w-full font-normal px-6 py-4 text-[#cac9c9] text-xl"
+              className="flex justify-between items-center w-full font-normal px-6 py-4 text-[#cac9c9] text-xl cursor-pointer"
             >
               {item.title}
               <motion.div

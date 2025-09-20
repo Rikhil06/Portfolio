@@ -67,9 +67,9 @@ const accordionData = [
 ];
 
 export default function AboutAccordion() {
-  const [openId, setOpenId] = useState(null);
+  const [openId, setOpenId] = useState<number | null>(null);
 
-  const toggleAccordion = (id: any) => {
+  const toggleAccordion = (id: number) => {
     setOpenId(openId === id ? null : id);
   };
 

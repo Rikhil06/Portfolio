@@ -1,7 +1,6 @@
 'use client';
 
 import { useRef } from 'react';
-import Navbar from "@/components/Navbar";
 import { Noto_Serif_Display } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,6 +8,7 @@ import { motion, useScroll, useTransform } from "motion/react";
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import { FaPlaneDeparture } from "react-icons/fa";
 import Accordion from '@/components/Accordion';
+import Head from 'next/head';
 
 const noto = Noto_Serif_Display({
     weight: ["200", "300", "400", "500", "600", "700", "800"],
@@ -35,9 +35,11 @@ export default function Home() {
   );
 
   return (
-    <div className="mt-2.5">
-      <Navbar />
-      
+      <>
+      <Head>
+        <title>Rikhil Makwana - Full Stack Developer</title>
+        <meta name="description" content="Rikhil Makwana | London-based Full-Stack Developer with 5+ years’ experience. Explore my web projects, download my CV, and connect to collaborate on modern, accessible digital experiences." />
+      </Head>
       <motion.main ref={wrapperRef} className='relative z-1'>
           <section className="pt-32 max-w-[51rem] ml-auto mr-auto bg-[#080808]">
             <div className="max-w-[64rem] ml-auto mr-auto">
@@ -257,7 +259,7 @@ export default function Home() {
                       <Image src='/7.png' fill alt="1" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2"/> 
                     </div>
                     <div className='p-6 gap-2 text-left rounded-b-xl flex-col flex'>
-                      <h3 className='text-2xl font-semibold'>Everyone's Energy · <span className={`${noto.className} text-sm italic`}>Case Study</span></h3>
+                      <h3 className='text-2xl font-semibold'>Everyone&apos;s Energy · <span className={`${noto.className} text-sm italic`}>Case Study</span></h3>
                       <p>84% increase in organic new users</p>
                     </div>
                   </div>
@@ -426,6 +428,6 @@ export default function Home() {
           </div>
         </div>
       </footer>
-    </div>
+    </>
   );
 }
