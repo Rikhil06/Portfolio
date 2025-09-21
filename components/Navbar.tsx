@@ -53,7 +53,7 @@ export default function Navbar() {
                 <Link href="/about" className='h-8 px-4 py-2 flex items-center justify-center md:text-[16px] text-5xl md:my-0 my-10' onClick={handleNavLinkClick}>
                     About
                 </Link>
-                <Link href="/Rikhil_Makwana.pdf" className='h-8 px-4 py-2 flex items-center justify-center gap-2 md:text-[16px] text-5xl md:my-0 my-10' onClick={handleNavLinkClick}>
+                <Link href="https://drive.google.com/file/d/1lkXiKm4sjx8mag2dFhZSJKctZ4WgtLFP/view?usp=sharing" target="_blank" className='h-8 px-4 py-2 flex items-center justify-center gap-2 md:text-[16px] text-5xl md:my-0 my-10' onClick={handleNavLinkClick}>
                     Resume
                     <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg" className='mt-0.5'>
                         <mask id="mask0_5447_55667" maskUnits="userSpaceOnUse" x="0" y="0" width="17" height="17">

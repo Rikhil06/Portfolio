@@ -21,7 +21,7 @@ export default function page() {
                                 architect and implement full-stack solutions, build custom APIs, and collaborate with cross-functional teams to deliver performant and accessible digital experiences.
                             </p>
                             <div className="flex gap-2 pt-6">
-                                <Link href="/Rikhil_Makwana.pdf" className="btn flex items-center justify-center border-2 border-[#004FB3] bg-[#004FB3] text-[#f8f8f8] rounded-[3rem] px-4 py-2 w-fit gap-1">Download CV <FaArrowDown /></Link>
+                                <Link href="https://drive.google.com/file/d/1lkXiKm4sjx8mag2dFhZSJKctZ4WgtLFP/view?usp=sharing" target="_blank" className="btn flex items-center justify-center border-2 border-[#004FB3] bg-[#004FB3] text-[#f8f8f8] rounded-[3rem] px-4 py-2 w-fit gap-1">Download CV <FaArrowDown /></Link>
                                 <Link href="https://github.com/Rikhil06/" target='_blank' className="btn flex items-center justify-center border-2 border-[#BFFFD1] bg-[#BFFFD1] text-[#080808] rounded-[3rem] px-4 py-2 w-fit gap-1">Github <FaGithub /></Link>
                             </div>
                         </div>
