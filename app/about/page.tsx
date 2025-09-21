@@ -28,7 +28,7 @@ export default function page() {
                         <div className="md:w-2/5 w-full">
                             <div className="p-2 border-1 border-[#ffffff14] rounded-2xl">
                                 <div className="bg-cover lg:w-[23.8rem] w-full h-[32rem] flex rounded-xl relative">
-                                    <Image src='/pp.png' fill alt="Rikhil Makwana" className="object-cover rounded-xl pp-image"/>
+                                    <Image src='/pp.png' fill alt="Rikhil Makwana" className="object-cover rounded-xl pp-image" loading="eager" fetchPriority="high" priority/>
                                 </div>
                             </div>
                         </div>
