@@ -130,7 +130,7 @@ export default function AboutAccordion() {
                         </div>
                       ))
                     ) : (
-                      <div className="grid grid-flow-col auto-rows-auto gap-x-8 gap-y-2 grid-rows-[repeat(5,auto)]">
+                      <div className="grid md:grid-flow-col md:auto-rows-auto gap-x-8 gap-y-2 md:grid-rows-[repeat(5,auto)] md:grid-cols-6 grid-cols-2">
                         {item.content.split("\nLine").map((line, i) => (
                           <p key={i} className="border-1 border-[#ffffff14] rounded-3xl bg-[#ffffff14] py-1 px-3 text-[14px] font-semibold w-fit">
                             {line.trim()}
