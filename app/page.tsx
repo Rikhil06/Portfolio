@@ -1,10 +1,10 @@
 'use client';
 
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { Noto_Serif_Display } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, useScroll, useTransform } from "motion/react";
+import { motion, useMotionValue, useScroll, useSpring, useTransform } from "motion/react";
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import { FaPlaneDeparture } from "react-icons/fa";
 import Accordion from '@/components/Accordion';
@@ -17,22 +17,32 @@ const noto = Noto_Serif_Display({
 
 export default function Home() {
 
-  const images:number = 10;
   const wrapperRef = useRef(null);
-  const { scrollYProgress } = useScroll({ target: wrapperRef, offset: ["start center", "end center"] });
-  const CARD_WIDTH = 20 * 16; // 20rem in pixels
-  const GAP = 8; // .5rem gap
-  const SPEED = 0.15; 
-  const TOTAL_CARDS_WIDTH = (CARD_WIDTH + GAP) * (images - 1);
+  const x = useMotionValue(0);
+  const { scrollYProgress } = useScroll({
+    target: wrapperRef,
+    offset: ["start end", "end start"],
+  });
+  const rawScrollX = useTransform(scrollYProgress, [0, 1], [0, -2000]);
+  const scrollX = useSpring(rawScrollX, {
+    stiffness: 200, // how "tight" the spring is
+    damping: 20,    // how much it resists oscillation (higher = less bounce)
+    mass: 0.5,      // makes it feel lighter (lower = faster catch-up)
+  });
 
-  const x = useTransform(
-    scrollYProgress,
-    [0, 1],
-    [
-      (CARD_WIDTH + GAP) / 3, // starting position
-      (TOTAL_CARDS_WIDTH * -1) * SPEED // move less for slower scroll
-    ]
-  );
+  useEffect(() => {
+    let prev = scrollX.get();
+
+    const unsub = scrollX.on("change", (latest) => {
+      const delta = latest - prev;
+      x.set(x.get() + delta); // add delta instead of overwriting
+      prev = latest;
+    });
+
+    return () => unsub();
+  }, [scrollX, x]);
+
+  const TOTAL_CARDS_WIDTH = 20 * 4 * 16;
 
   return (
       <>
@@ -56,36 +66,47 @@ export default function Home() {
 
 
         <section className="pt-20 pb-20 w-lvw relative overflow-hidden bg-[#080808] md:px-0 px-4">
-          <motion.div className="gap-y-2 gap-x-2 flex items-center justify-items-start w-max" style={{ x }}>
+          <motion.div 
+            className="gap-y-2 gap-x-2 flex items-center justify-items-start w-max cursor-grab active:cursor-grabbing touch-none" 
+            style={{ x }}
+            drag="x"
+            dragListener={true}
+            dragMomentum={true}
+            dragConstraints={{ left: -TOTAL_CARDS_WIDTH, right: 0 }}
+            dragElastic={0.15}
+            dragTransition={{ bounceStiffness: 300, bounceDamping: 20 }}
+            onDragStart={() => { document.body.style.userSelect = 'none'; }}
+            onDragEnd={() => { document.body.style.userSelect = ''; }}
+          >
             <div className="relative w-[20rem] h-[45vh]">
-              <Image src='/1.png' fill alt="1" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2"/> 
+              <Image src='/1.png' fill alt="1" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2" draggable={false} onDragStart={(e) => e.preventDefault()}/> 
             </div>
             <div className="relative w-[20rem] h-[45vh]">
-              <Image src='/2.png' fill alt="1" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2"/> 
+              <Image src='/2.png' fill alt="1" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2" draggable={false} onDragStart={(e) => e.preventDefault()}/> 
             </div>
             <div className="relative w-[20rem] h-[45vh]">
-              <Image src='/4.png' fill alt="1" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2"/> 
+              <Image src='/4.png' fill alt="1" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2" draggable={false} onDragStart={(e) => e.preventDefault()}/> 
             </div>
             <div className="relative w-[20rem] h-[45vh]">
-              <Image src='/3.png' fill alt="1" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2"/> 
+              <Image src='/3.png' fill alt="1" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2" draggable={false} onDragStart={(e) => e.preventDefault()}/> 
             </div>
             <div className="relative w-[20rem] h-[45vh]">
-              <Image src='/5.png' fill alt="1" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2"/> 
+              <Image src='/5.png' fill alt="1" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2" draggable={false} onDragStart={(e) => e.preventDefault()}/> 
             </div>
             <div className="relative w-[20rem] h-[45vh]">
-              <Image src='/6.png' fill alt="1" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2"/> 
+              <Image src='/6.png' fill alt="1" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2" draggable={false} onDragStart={(e) => e.preventDefault()}/> 
             </div>
             <div className="relative w-[20rem] h-[45vh]">
-              <Image src='/7.png' fill alt="1" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2"/> 
+              <Image src='/7.png' fill alt="1" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2" draggable={false} onDragStart={(e) => e.preventDefault()}/> 
             </div>
             <div className="relative w-[20rem] h-[45vh]">
-              <Image src='/.png' fill alt="1" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2"/> 
+              <Image src='/10.png' fill alt="1" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2" draggable={false} onDragStart={(e) => e.preventDefault()}/> 
             </div>
             <div className="relative w-[20rem] h-[45vh]">
-              <Image src='/.png' fill alt="1" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2"/> 
+              <Image src='/9.png' fill alt="1" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2 object-right" draggable={false} onDragStart={(e) => e.preventDefault()}/> 
             </div>
             <div className="relative w-[20rem] h-[45vh]">
-              <Image src='/.png' fill alt="1" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2"/> 
+              <Image src='/11.png' fill alt="1" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2" draggable={false} onDragStart={(e) => e.preventDefault()}/> 
             </div>
           </motion.div>
           <div className="flex justify-center pt-12">
