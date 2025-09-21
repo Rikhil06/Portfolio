@@ -82,7 +82,7 @@ export default function AboutAccordion() {
             key={item.id}
             className="bg-[#101010] px-8 rounded-2xl mb-2 border-1 border-[#ffffff14]"
           >
-            <h3
+            <h2
               onClick={() => toggleAccordion(item.id)}
               className="flex justify-between items-center w-full py-5 text-[#f8f8f8] text-4xl font-medium cursor-pointer"
             >
@@ -93,7 +93,7 @@ export default function AboutAccordion() {
               >
                 <FiPlus color="#cac9c9" />
               </motion.div>
-            </h3>
+            </h2>
 
             <AnimatePresence initial={false}>
               {isOpen && (

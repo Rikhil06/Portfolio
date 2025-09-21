@@ -68,34 +68,34 @@ const dragOffset = useMotionValue(0);
               onDragEnd={() => { document.body.style.userSelect = ''; }}
             >
               <div className="relative w-[20rem] h-[45vh]">
-                <Image src='/1.png' fill alt="1" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2" draggable={false} onDragStart={(e) => e.preventDefault()}/> 
+                <Image src='/1.png' fill alt="Glion" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2" draggable={false} onDragStart={(e) => e.preventDefault()}/> 
               </div>
               <div className="relative w-[20rem] h-[45vh]">
-                <Image src='/2.png' fill alt="1" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2" draggable={false} onDragStart={(e) => e.preventDefault()}/> 
+                <Image src='/2.png' fill alt="Cytora" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2" draggable={false} onDragStart={(e) => e.preventDefault()}/> 
               </div>
               <div className="relative w-[20rem] h-[45vh]">
-                <Image src='/4.png' fill alt="1" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2" draggable={false} onDragStart={(e) => e.preventDefault()}/> 
+                <Image src='/4.png' fill alt="MBL Seminars" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2" draggable={false} onDragStart={(e) => e.preventDefault()}/> 
               </div>
               <div className="relative w-[20rem] h-[45vh]">
-                <Image src='/3.png' fill alt="1" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2" draggable={false} onDragStart={(e) => e.preventDefault()}/> 
+                <Image src='/3.png' fill alt="MetFilm School" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2" draggable={false} onDragStart={(e) => e.preventDefault()}/> 
               </div>
               <div className="relative w-[20rem] h-[45vh]">
-                <Image src='/5.png' fill alt="1" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2" draggable={false} onDragStart={(e) => e.preventDefault()}/> 
+                <Image src='/5.png' fill alt="Good Salon Guide" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2" draggable={false} onDragStart={(e) => e.preventDefault()}/> 
               </div>
               <div className="relative w-[20rem] h-[45vh]">
-                <Image src='/6.png' fill alt="1" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2" draggable={false} onDragStart={(e) => e.preventDefault()}/> 
+                <Image src='/6.png' fill alt="Hudgell's Solicitors" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2" draggable={false} onDragStart={(e) => e.preventDefault()}/> 
               </div>
               <div className="relative w-[20rem] h-[45vh]">
-                <Image src='/7.png' fill alt="1" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2" draggable={false} onDragStart={(e) => e.preventDefault()}/> 
+                <Image src='/7.png' fill alt="Everyone's Energy" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2" draggable={false} onDragStart={(e) => e.preventDefault()}/> 
               </div>
               <div className="relative w-[20rem] h-[45vh]">
-                <Image src='/10.png' fill alt="1" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2" draggable={false} onDragStart={(e) => e.preventDefault()}/> 
+                <Image src='/10.png' fill alt="Royal Society" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2" draggable={false} onDragStart={(e) => e.preventDefault()}/> 
               </div>
               <div className="relative w-[20rem] h-[45vh]">
-                <Image src='/9.png' fill alt="1" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2 object-right" draggable={false} onDragStart={(e) => e.preventDefault()}/> 
+                <Image src='/9.png' fill alt="NFTS" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2 object-right" draggable={false} onDragStart={(e) => e.preventDefault()}/> 
               </div>
               <div className="relative w-[20rem] h-[45vh]">
-                <Image src='/11.png' fill alt="1" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2" draggable={false} onDragStart={(e) => e.preventDefault()}/> 
+                <Image src='/11.png' fill alt="Categorama" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2" draggable={false} onDragStart={(e) => e.preventDefault()}/> 
               </div>
             </motion.div>
           </motion.div>
@@ -178,7 +178,7 @@ const dragOffset = useMotionValue(0);
                 <Link href="https://cytora.wpengine.com/" target="_blank" className='p-2 border-1 border-[#ffffff14] rounded-2xl bg-[#101010 flex flex-col relative] w-full'>
                   <div className="bg-[#101010] text-[#f8f8f8] rounded-xl flex flex-col h-full relative overflow-hidden">
                     <div className='w-full md:h-[559px] h-[350px] relative'>
-                      <Image src='/2.png' fill alt="1" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2"/> 
+                      <Image src='/2.png' fill alt="Cytora" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2"/> 
                     </div>
                     <div className='p-6 gap-2 text-left rounded-b-xl flex-col flex'>
                       <p></p>
@@ -192,7 +192,7 @@ const dragOffset = useMotionValue(0);
                 <Link href="https://www.metfilmschool.ac.uk/" target="_blank" className='p-2 border-1 border-[#ffffff14] rounded-2xl bg-[#101010 flex flex-col relative] md:w-[50%] w-full md:h-[559px] h-auto hover:w-[70%] transition-[width] duration-500 ease-in-out'>
                   <div className="bg-[#101010] text-[#f8f8f8] rounded-xl flex flex-col h-full relative overflow-hidden">
                     <div className='w-full md:h-[559px] h-[350px] relative'>
-                      <Image src='/3.png' fill alt="1" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2"/> 
+                      <Image src='/3.png' fill alt="MetFilms School" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2"/> 
                     </div>
                     <div className='p-6 gap-2 text-left rounded-b-xl flex-col flex'>
                       <p></p>
@@ -204,7 +204,7 @@ const dragOffset = useMotionValue(0);
                 <Link href="/" target='_blank' className='p-2 border-1 border-[#ffffff14] rounded-2xl bg-[#101010 flex flex-col relative] md:w-[50%] w-full md:h-[559px] h-auto hover:w-[70%] transition-[width] duration-500 ease-in-out'>
                   <div className="bg-[#101010] text-[#f8f8f8] rounded-xl flex flex-col h-full relative overflow-hidden">
                     <div className='w-full md:h-[559px] h-[350px] relative'>
-                      <Image src='/8.png' fill alt="1" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2"/> 
+                      <Image src='/8.png' fill alt="Hotpoint/Whirlpool/Indesit" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2"/> 
                     </div>
                     <div className='p-6 gap-2 text-left rounded-b-xl flex-col flex'>
                       <p></p>
@@ -218,7 +218,7 @@ const dragOffset = useMotionValue(0);
                  <Link href="https://www.glion.edu/" target='_blank' className='p-2 border-1 border-[#ffffff14] rounded-2xl bg-[#101010 flex flex-col relative] md:w-[50%] w-full lg:h-[390px] md:h-[480px] h-auto hover:w-[70%] transition-[width] duration-500 ease-in-out'>
                   <div className="bg-[#101010] text-[#f8f8f8] rounded-xl flex flex-col h-full relative overflow-hidden">
                     <div className='w-full md:h-[559px] h-[350px] relative'>
-                      <Image src='/1.png' fill alt="1" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2"/> 
+                      <Image src='/1.png' fill alt="Glion" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2"/> 
                     </div>
                     <div className='p-6 gap-2 text-left rounded-b-xl flex-col flex'>
                       <p></p>
@@ -230,7 +230,7 @@ const dragOffset = useMotionValue(0);
                 <Link href="https://www.mblseminars.com/" target="_blank" className='p-2 border-1 border-[#ffffff14] rounded-2xl bg-[#101010 flex flex-col relative] md:w-[50%] w-full lg:h-[559px] md:h-[480px] h-auto hover:w-[70%] transition-[width] duration-500 ease-in-out'>
                   <div className="bg-[#101010] text-[#f8f8f8] rounded-xl flex flex-col h-full relative overflow-hidden">
                     <div className='w-full md:h-[559px] h-[350px] relative'>
-                      <Image src='/4.png' fill alt="1" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2"/> 
+                      <Image src='/4.png' fill alt="MBL Seminars" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2"/> 
                     </div>
                     <div className='p-6 gap-2 text-left rounded-b-xl flex-col flex'>
                       <p></p>
@@ -242,7 +242,7 @@ const dragOffset = useMotionValue(0);
                 <Link href="https://www.goodsalonguide.com/" target="_blank" className='p-2 border-1 border-[#ffffff14] rounded-2xl bg-[#101010 flex flex-col relative] md:w-[50%] w-full md:h-[480px] h-auto hover:w-[70%] transition-[width] duration-500 ease-in-out'>
                   <div className="bg-[#101010] text-[#f8f8f8] rounded-xl flex flex-col h-full relative overflow-hidden">
                     <div className='w-full md:h-[559px] h-[350px] relative'>
-                      <Image src='/5.png' fill alt="1" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2"/> 
+                      <Image src='/5.png' fill alt="Good Salon Guide" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2"/> 
                     </div>
                     <div className='p-6 gap-2 text-left rounded-b-xl flex-col flex'>
                       <p></p>
@@ -256,7 +256,7 @@ const dragOffset = useMotionValue(0);
                 <Link href="https://www.hudgellsolicitors.co.uk/" target='_blank' className='p-2 border-1 border-[#ffffff14] rounded-2xl bg-[#101010 flex flex-col relative] md:w-[50%] w-full md:h-[450px] h-auto hover:w-[70%] transition-[width] duration-500 ease-in-out'>
                   <div className="bg-[#101010] text-[#f8f8f8] rounded-xl flex flex-col h-full relative overflow-hidden">
                     <div className='w-full md:h-[559px] h-[350px] relative'>
-                      <Image src='/6.png' fill alt="1" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2"/> 
+                      <Image src='/6.png' fill alt="Hudgell's Solicitors" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2"/> 
                     </div>
                     <div className='p-6 gap-2 text-left rounded-b-xl flex-col flex'>
                       <h3 className='text-2xl font-semibold'>Hudgell Solicitors · <span className={`${noto.className} text-sm italic`}>Case Study</span></h3>
@@ -267,7 +267,7 @@ const dragOffset = useMotionValue(0);
                 <Link href="https://everyonesenergy.co.uk/" target='_blank' className='p-2 border-1 border-[#ffffff14] rounded-2xl bg-[#101010 flex flex-col relative] md:w-[50%] w-full lg:h-[599px] md:h-[450px] h-auto hover:w-[70%] transition-[width] duration-500 ease-in-out'>
                   <div className="bg-[#101010] text-[#f8f8f8] rounded-xl flex flex-col h-full relative overflow-hidden">
                     <div className='w-full md:h-[559px] h-[350px] relative'>
-                      <Image src='/7.png' fill alt="1" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2"/> 
+                      <Image src='/7.png' fill alt="Everyone's Energy" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2"/> 
                     </div>
                     <div className='p-6 gap-2 text-left rounded-b-xl flex-col flex'>
                       <h3 className='text-2xl font-semibold'>Everyone&apos;s Energy · <span className={`${noto.className} text-sm italic`}>Case Study</span></h3>

@@ -22,8 +22,8 @@ p{
 }
 
 .pp-image{
-  background-image: url(/pp.png);
-  background-position: 50% 13%;
+  /* background-image: url(/pp.png); */
+  object-position: 50% 13%;
 }
 
 .about-hero{

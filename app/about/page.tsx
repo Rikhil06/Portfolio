@@ -27,7 +27,9 @@ export default function page() {
                         </div>
                         <div className="md:w-2/5 w-full">
                             <div className="p-2 border-1 border-[#ffffff14] rounded-2xl">
-                                <div className="bg-cover lg:w-[23.8rem] w-full h-[32rem] flex pp-image rounded-xl"></div>
+                                <div className="bg-cover lg:w-[23.8rem] w-full h-[32rem] flex rounded-xl relative">
+                                    <Image src='/pp.png' fill alt="Rikhil Makwana" className="object-cover rounded-xl pp-image"/>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -53,7 +55,7 @@ export default function page() {
                             <Image src="/wordpress.svg" width={60} height={32} alt="Wordpress" />                   
                         </div>
                         <div className="flex p-3.5 w-1/4 items-center justify-center bg-[#101010] rounded-2xl border-1 border-[#ffffff14]">
-                            <Image src="/git.svg" width={70} height={32} alt="VSCode" />                   
+                            <Image src="/git.svg" width={70} height={32} alt="GIT" />                   
                         </div>
                     </div>
                 </div>
@@ -65,14 +67,14 @@ export default function page() {
                         <div className="md:w-2/4 w-full">
                             <div className="rounded-xl">
                                 <div className='md:h-[687px] h-[344px] w-full relative'>
-                                    <Image src='/mockup.png' fill alt="mockup" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2"/> 
+                                    <Image src='/mockup.png' fill alt="Cytora" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2"/> 
                                 </div>
                             </div>
                         </div>
                         <div className="md:w-2/4 w-full">
                             <div className="rounded-xl">
                                 <div className='md:h-[687px] h-[344px] w-full relative'>
-                                    <Image src='/placeholder.jpg' fill alt="mockup" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2"/> 
+                                    <Image src='/placeholder.jpg' fill alt="Abstract Art" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2"/> 
                                 </div>
                             </div>
                         </div>
