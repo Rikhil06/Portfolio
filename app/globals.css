@@ -15,7 +15,7 @@ p{
 }
 
 .inner-wrapper{
-  background-image: url(/gif.gif);
+  background-image: url(/gif.webp);
   background-position: 50%;
   background-size: auto;
   box-shadow: 0 2px 5px #ffffff0a;
@@ -27,7 +27,7 @@ p{
 }
 
 .about-hero{
-  background-image: linear-gradient(#101010d9, #101010d9), url(/about-hero.gif);
+  background-image: linear-gradient(#101010d9, #101010d9), url(/about-hero.webp);
     background-position: 0 0, 50%;
     background-size: auto, cover;
 }

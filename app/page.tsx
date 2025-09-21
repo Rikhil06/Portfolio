@@ -11,7 +11,7 @@ import Accordion from '@/components/Accordion';
 import Head from './head';
 
 const noto = Noto_Serif_Display({
-    weight: ["200", "300", "400", "500", "600", "700", "800"],
+    weight: ["400"],
     subsets: ['latin'],
 });
 
