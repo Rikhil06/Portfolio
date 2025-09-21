@@ -21,7 +21,7 @@ export default function RootLayout({
       <body
         className={`${manrope.className} antialiased`}
       >
-        <div className="mt-2.5">
+        <div className="md:mt-2.5">
           <Navbar />
           {children}
           <Analytics />

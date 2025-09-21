@@ -41,11 +41,11 @@ export default function Home() {
         <meta name="description" content="Rikhil Makwana | London-based Full-Stack Developer with 5+ years’ experience. Explore my web projects, download my CV, and connect to collaborate on modern, accessible digital experiences." />
       </Head>
       <motion.main ref={wrapperRef} className='relative z-1'>
-          <section className="pt-32 max-w-[51rem] ml-auto mr-auto bg-[#080808]">
+          <section className="pt-32 max-w-[51rem] ml-auto mr-auto bg-[#080808] md:px-0 px-4">
             <div className="max-w-[64rem] ml-auto mr-auto">
               <div className="flex items-center flex-col text-center">
                 <p className={`${noto.className} text-sm !italic`}>Full-Stack Developer & Problem Solver</p>
-                <h1 className="text-[4rem] font-medium leading-[4.5rem] text-[#f8f8f8] pb-4">Crafting fast, scalable, and user-friendly digital solutions.</h1>
+                <h1 className="md:text-[4rem] text-5xl font-medium md:leading-[4.5rem] leading-14 text-[#f8f8f8] pb-4">Crafting fast, scalable, and user-friendly digital solutions.</h1>
                 <p>
                   5+ years crafting modern websites and apps with React, Next.js, Node.js, and WordPress.
                   From custom CMS builds to performance optimisation, I blend technical precision with design flair for seamless user experiences.
@@ -55,7 +55,7 @@ export default function Home() {
           </section>
 
 
-        <section className="pt-20 pb-20 w-lvw relative overflow-hidden bg-[#080808]">
+        <section className="pt-20 pb-20 w-lvw relative overflow-hidden bg-[#080808] md:px-0 px-4">
           <motion.div className="gap-y-2 gap-x-2 flex items-center justify-items-start w-max" style={{ x }}>
             <div className="relative w-[20rem] h-[45vh]">
               <Image src='/1.png' fill alt="1" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2"/> 
@@ -93,14 +93,14 @@ export default function Home() {
           </div>
         </section>
         
-        <section className="pt-20 pb-20 bg-[#080808]">
+        <section className="pt-20 pb-20 bg-[#080808] md:px-0 px-4">
           <div className="max-w-[64rem] ml-auto mr-auto">
             <div>
               <p className={`${noto.className} text-sm text-center pb-2 !italic`}>What I do</p>
               <h2 className='text-5xl text-center font-medium text-[#f8f8f8]'>Areas of expertise</h2>
             </div>
-            <div className='flex pt-12 gap-2'>
-              <div className="w-2/4 bg-[#101010] p-2 border-1 border-[#ffffff14] rounded-2xl">
+            <div className='flex pt-12 gap-2 md:flex-nowrap flex-wrap'>
+              <div className="md:w-2/4 w-full bg-[#101010] p-2 border-1 border-[#ffffff14] rounded-2xl">
                 <div className="bg-[#101010] rounded-xl text-[#f8f8f8]">
                   <div className="bg-[#080808] rounded-xl">
                     <DotLottieReact
@@ -126,7 +126,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            <div className="w-2/4 bg-[#101010] p-2 border-1 border-[#ffffff14] rounded-2xl">
+            <div className="md:w-2/4 w-full bg-[#101010] p-2 border-1 border-[#ffffff14] rounded-2xl">
                 <div className="bg-[#101010] rounded-xl text-[#f8f8f8]">
                   <div className="bg-[#080808] rounded-xl">
                     <DotLottieReact
@@ -155,7 +155,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="case-studies" className="pb-20 bg-[#080808]">
+        <section id="case-studies" className="pb-20 bg-[#080808] md:px-0 px-4">
           <div className="max-w-[64rem] ml-auto mr-auto border-t-1 pt-20 border-[#ffffff14]">
             <div>
               <p className={`${noto.className} text-sm text-center pb-2 !italic`}>Projects</p>
@@ -166,7 +166,7 @@ export default function Home() {
               <div className="gap-2 flex items-stretch justify-between">
                 <Link href="https://cytora.wpengine.com/" target="_blank" className='p-2 border-1 border-[#ffffff14] rounded-2xl bg-[#101010 flex flex-col relative] w-full'>
                   <div className="bg-[#101010] text-[#f8f8f8] rounded-xl flex flex-col h-full relative overflow-hidden">
-                    <div className='w-full h-[559px] relative'>
+                    <div className='w-full md:h-[559px] h-[350px] relative'>
                       <Image src='/2.png' fill alt="1" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2"/> 
                     </div>
                     <div className='p-6 gap-2 text-left rounded-b-xl flex-col flex'>
@@ -177,10 +177,10 @@ export default function Home() {
                   </div>
                 </Link>
               </div>
-              <div className="gap-2 flex items-stretch justify-between">
-                <Link href="https://www.metfilmschool.ac.uk/" target="_blank" className='p-2 border-1 border-[#ffffff14] rounded-2xl bg-[#101010 flex flex-col relative] w-[50%] h-[559px] hover:w-[70%] transition-[width] duration-500 ease-in-out'>
+              <div className="gap-2 flex items-stretch justify-between md:flex-nowrap flex-wrap">
+                <Link href="https://www.metfilmschool.ac.uk/" target="_blank" className='p-2 border-1 border-[#ffffff14] rounded-2xl bg-[#101010 flex flex-col relative] md:w-[50%] w-full md:h-[559px] h-auto hover:w-[70%] transition-[width] duration-500 ease-in-out'>
                   <div className="bg-[#101010] text-[#f8f8f8] rounded-xl flex flex-col h-full relative overflow-hidden">
-                    <div className='w-full h-[559px] relative'>
+                    <div className='w-full md:h-[559px] h-[350px] relative'>
                       <Image src='/3.png' fill alt="1" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2"/> 
                     </div>
                     <div className='p-6 gap-2 text-left rounded-b-xl flex-col flex'>
@@ -190,9 +190,9 @@ export default function Home() {
                     </div>
                   </div>
                 </Link>
-                <Link href="/" target='_blank' className='p-2 border-1 border-[#ffffff14] rounded-2xl bg-[#101010 flex flex-col relative] w-[50%] h-[559px] hover:w-[70%] transition-[width] duration-500 ease-in-out'>
+                <Link href="/" target='_blank' className='p-2 border-1 border-[#ffffff14] rounded-2xl bg-[#101010 flex flex-col relative] md:w-[50%] w-full md:h-[559px] h-auto hover:w-[70%] transition-[width] duration-500 ease-in-out'>
                   <div className="bg-[#101010] text-[#f8f8f8] rounded-xl flex flex-col h-full relative overflow-hidden">
-                    <div className='w-full h-[559px] relative'>
+                    <div className='w-full md:h-[559px] h-[350px] relative'>
                       <Image src='/8.png' fill alt="1" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2"/> 
                     </div>
                     <div className='p-6 gap-2 text-left rounded-b-xl flex-col flex'>
@@ -203,10 +203,10 @@ export default function Home() {
                   </div>
                 </Link>
               </div>
-              <div className="gap-2 flex items-stretch justify-between">
-                 <Link href="https://www.glion.edu/" target='_blank' className='p-2 border-1 border-[#ffffff14] rounded-2xl bg-[#101010 flex flex-col relative] w-[50%] h-[390px] hover:w-[70%] transition-[width] duration-500 ease-in-out'>
+              <div className="gap-2 flex items-stretch justify-between md:flex-nowrap flex-wrap">
+                 <Link href="https://www.glion.edu/" target='_blank' className='p-2 border-1 border-[#ffffff14] rounded-2xl bg-[#101010 flex flex-col relative] md:w-[50%] w-full lg:h-[390px] md:h-[480px] h-auto hover:w-[70%] transition-[width] duration-500 ease-in-out'>
                   <div className="bg-[#101010] text-[#f8f8f8] rounded-xl flex flex-col h-full relative overflow-hidden">
-                    <div className='w-full h-[559px] relative'>
+                    <div className='w-full md:h-[559px] h-[350px] relative'>
                       <Image src='/1.png' fill alt="1" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2"/> 
                     </div>
                     <div className='p-6 gap-2 text-left rounded-b-xl flex-col flex'>
@@ -216,9 +216,9 @@ export default function Home() {
                     </div>
                   </div>
                 </Link>
-                <Link href="https://www.mblseminars.com/" target="_blank" className='p-2 border-1 border-[#ffffff14] rounded-2xl bg-[#101010 flex flex-col relative] w-[50%] h-[559px] hover:w-[70%] transition-[width] duration-500 ease-in-out'>
+                <Link href="https://www.mblseminars.com/" target="_blank" className='p-2 border-1 border-[#ffffff14] rounded-2xl bg-[#101010 flex flex-col relative] md:w-[50%] w-full lg:h-[559px] md:h-[480px] h-auto hover:w-[70%] transition-[width] duration-500 ease-in-out'>
                   <div className="bg-[#101010] text-[#f8f8f8] rounded-xl flex flex-col h-full relative overflow-hidden">
-                    <div className='w-full h-[559px] relative'>
+                    <div className='w-full md:h-[559px] h-[350px] relative'>
                       <Image src='/4.png' fill alt="1" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2"/> 
                     </div>
                     <div className='p-6 gap-2 text-left rounded-b-xl flex-col flex'>
@@ -228,9 +228,9 @@ export default function Home() {
                     </div>
                   </div>
                 </Link>
-                <Link href="https://www.goodsalonguide.com/" target="_blank" className='p-2 border-1 border-[#ffffff14] rounded-2xl bg-[#101010 flex flex-col relative] w-[50%] h-[480px] hover:w-[70%] transition-[width] duration-500 ease-in-out'>
+                <Link href="https://www.goodsalonguide.com/" target="_blank" className='p-2 border-1 border-[#ffffff14] rounded-2xl bg-[#101010 flex flex-col relative] md:w-[50%] w-full md:h-[480px] h-auto hover:w-[70%] transition-[width] duration-500 ease-in-out'>
                   <div className="bg-[#101010] text-[#f8f8f8] rounded-xl flex flex-col h-full relative overflow-hidden">
-                    <div className='w-full h-[559px] relative'>
+                    <div className='w-full md:h-[559px] h-[350px] relative'>
                       <Image src='/5.png' fill alt="1" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2"/> 
                     </div>
                     <div className='p-6 gap-2 text-left rounded-b-xl flex-col flex'>
@@ -241,10 +241,10 @@ export default function Home() {
                   </div>
                 </Link>
               </div>
-              <div className="gap-2 flex items-stretch justify-between">
-                <Link href="https://www.hudgellsolicitors.co.uk/" target='_blank' className='p-2 border-1 border-[#ffffff14] rounded-2xl bg-[#101010 flex flex-col relative] w-[50%] h-[450px] hover:w-[70%] transition-[width] duration-500 ease-in-out'>
+              <div className="gap-2 flex items-stretch justify-between md:flex-nowrap flex-wrap">
+                <Link href="https://www.hudgellsolicitors.co.uk/" target='_blank' className='p-2 border-1 border-[#ffffff14] rounded-2xl bg-[#101010 flex flex-col relative] md:w-[50%] w-full md:h-[450px] h-auto hover:w-[70%] transition-[width] duration-500 ease-in-out'>
                   <div className="bg-[#101010] text-[#f8f8f8] rounded-xl flex flex-col h-full relative overflow-hidden">
-                    <div className='w-full h-[559px] relative'>
+                    <div className='w-full md:h-[559px] h-[350px] relative'>
                       <Image src='/6.png' fill alt="1" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2"/> 
                     </div>
                     <div className='p-6 gap-2 text-left rounded-b-xl flex-col flex'>
@@ -253,9 +253,9 @@ export default function Home() {
                     </div>
                   </div>
                 </Link>
-                <Link href="https://everyonesenergy.co.uk/" target='_blank' className='p-2 border-1 border-[#ffffff14] rounded-2xl bg-[#101010 flex flex-col relative] w-[50%] h-[599px] hover:w-[70%] transition-[width] duration-500 ease-in-out'>
+                <Link href="https://everyonesenergy.co.uk/" target='_blank' className='p-2 border-1 border-[#ffffff14] rounded-2xl bg-[#101010 flex flex-col relative] md:w-[50%] w-full lg:h-[599px] md:h-[450px] h-auto hover:w-[70%] transition-[width] duration-500 ease-in-out'>
                   <div className="bg-[#101010] text-[#f8f8f8] rounded-xl flex flex-col h-full relative overflow-hidden">
-                    <div className='w-full h-[559px] relative'>
+                    <div className='w-full md:h-[559px] h-[350px] relative'>
                       <Image src='/7.png' fill alt="1" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2"/> 
                     </div>
                     <div className='p-6 gap-2 text-left rounded-b-xl flex-col flex'>
@@ -274,14 +274,14 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="pb-20 bg-[#080808]">
+        <section className="pb-20 bg-[#080808] md:px-0 px-4">
           <div className="max-w-[64rem] ml-auto mr-auto border-t-1 pt-20 border-[#ffffff14]">
             <div>
               <p className={`${noto.className} text-sm text-center pb-2 !italic`}>Skills </p>
               <h2 className='text-5xl text-center font-medium text-[#f8f8f8]'>My Specialties</h2>
             </div>
-             <div className='flex pt-12 gap-2'>
-              <div className="w-2/6 bg-[#101010] p-2 border-1 border-[#ffffff14] rounded-2xl">
+             <div className='flex pt-12 gap-2 lg:flex-nowrap flex-wrap'>
+              <div className="lg:w-2/6 w-full bg-[#101010] p-2 border-1 border-[#ffffff14] rounded-2xl">
                 <div className="p-6">
                   <div className="">
                     <h3 className='text-2xl font-semibold pb-2 text-[#f8f8f8]'>Frontend</h3>
@@ -298,7 +298,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="w-2/6 bg-[#101010] p-2 border-1 border-[#ffffff14] rounded-2xl">
+              <div className="lg:w-2/6 w-full bg-[#101010] p-2 border-1 border-[#ffffff14] rounded-2xl">
                 <div className="p-6">
                   <div className="">
                     <h3 className='text-2xl font-semibold pb-2 text-[#f8f8f8]'>Backend</h3>
@@ -313,7 +313,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="w-2/6 bg-[#101010] p-2 border-1 border-[#ffffff14] rounded-2xl">
+              <div className="lg:w-2/6 w-full bg-[#101010] p-2 border-1 border-[#ffffff14] rounded-2xl">
                 <div className="p-6">
                   <div className="">
                     <h3 className='text-2xl font-semibold pb-2 text-[#f8f8f8]'>DevOps/Infrastructure</h3>
@@ -331,8 +331,8 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className='flex pt-2 gap-2'>
-              <div className="w-2/6 bg-[#101010] p-2 border-1 border-[#ffffff14] rounded-2xl">
+            <div className='flex pt-2 gap-2 lg:flex-nowrap flex-wrap'>
+              <div className="lg:w-2/6 w-full bg-[#101010] p-2 border-1 border-[#ffffff14] rounded-2xl">
                 <div className="p-6">
                   <div className="">
                     <h3 className='text-2xl font-semibold pb-2 text-[#f8f8f8]'>CMS’s</h3>
@@ -348,7 +348,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="w-2/6 bg-[#101010] p-2 border-1 border-[#ffffff14] rounded-2xl">
+              <div className="lg:w-2/6 w-full bg-[#101010] p-2 border-1 border-[#ffffff14] rounded-2xl">
                 <div className="p-6">
                   <div className="">
                     <h3 className='text-2xl font-semibold pb-2 text-[#f8f8f8]'>Tools & Design:</h3>
@@ -362,7 +362,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="w-2/6 bg-[#101010] p-2 border-1 border-[#ffffff14] rounded-2xl">
+              <div className="lg:w-2/6 w-full bg-[#101010] p-2 border-1 border-[#ffffff14] rounded-2xl">
                 <div className="p-6">
                   <div className="">
                     <h3 className='text-2xl font-semibold pb-2 text-[#f8f8f8]'>Analytics</h3>
@@ -382,9 +382,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="pb-20 bg-[#080808]">
+        <section className="pb-20 bg-[#080808] md:px-0 px-4">
           <div className="max-w-[64rem] ml-auto mr-auto border-t-1 pt-20 border-[#ffffff14]">
-            <div>
+            <div className='md:pb-0 pb-4'>
               <p className={`${noto.className} text-sm text-center pb-2 !italic`}>Frequently asked questions</p>
               <h2 className='text-5xl text-center font-medium text-[#f8f8f8]'>Quick answers</h2>
             </div>
@@ -392,11 +392,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="pb-20 bg-[#080808]">
+        <section className="pb-20 bg-[#080808] md:px-0 px-4">
           <div className="max-w-[64rem] ml-auto mr-auto border-t-1 pt-20 border-[#ffffff14]">
             <div className="p-2 border-1 border-[#ffffff14] rounded-2xl bg-[#101010]">
               <div className="p-8 text-center w-full inner-wrapper">
-                <h2 className='text-[#f8f8f8] text-[4rem] font-medium'>Exploring new challenges</h2>
+                <h2 className='text-[#f8f8f8] md:text-[4rem] text-5xl font-medium'>Exploring new challenges</h2>
                 <div className="flex justify-center pt-8">
                   <Link href="mailto:rikhilmakwana06@gmail.com?subject=Hello%20Rikhil!" className="btn flex items-center justify-center border-2 border-[#007aff] bg-[#007aff] text-[#f8f8f8] rounded-[3rem] px-4 py-2 w-fit">Contact</Link>
                 </div>
@@ -410,8 +410,8 @@ export default function Home() {
       <footer className='bg-[#101010] sticky bottom-0'>
         <div className="px-10 h-auto">
           <div className="max-w-[64rem] ml-auto mr-auto w-full">
-            <div className="py-12 flex items-center justify-between border-b-1 border-[#ffffff14]">
-              <div className='flex items-center gap-6'>
+            <div className="py-12 flex md:items-center md:justify-between border-b-1 border-[#ffffff14] md:flex-row flex-col">
+              <div className='flex md:items-center gap-6 md:flex-row flex-col md:pb-0 pb-6'>
                 <Link href="https://www.linkedin.com/in/rikhil-makwana-93940a153/" target='_blank' className='text-[#cac9c9]'>Linkedin</Link>
                 <Link href="https://github.com/Rikhil06/" target='_blank' className='text-[#cac9c9]'>Github</Link>
                 <Link href="mailto:rikhilmakwana06@gmail.com?subject=Hello%20Rikhil!" target='_blank' className='text-[#cac9c9]'>rikhilmakwana06@gmail.com</Link>

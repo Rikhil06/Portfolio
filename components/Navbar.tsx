@@ -1,11 +1,14 @@
 import { animate } from 'motion/react';
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { RxHamburgerMenu } from "react-icons/rx";
+
 
 export default function Navbar() {
     const pathname = usePathname();
     const router = useRouter();
+    const [isNavOpen, setIsNavOpen] = useState(false);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -35,19 +38,22 @@ export default function Navbar() {
     } else {
       router.push('/#case-studies');
     }
+    setIsNavOpen(false);
   };
+
+  const handleNavLinkClick = () => setIsNavOpen(false);
   return (
-    <header className='flex justify-center fixed left-2/4 -translate-x-2/4 z-50'>
-        <nav className='flex items-center p-2 border-1 border-[#ffffff14] bg-[#101010] rounded-[3rem] backdrop-blur-lg ml-auto mr-auto gap-4'>
-            <Link href="/" className='text-2xl pl-4 opacity-[.9] font-semibold'>Rikhil.</Link>
-            <ul className='flex items-center'>
-                <button onClick={handleCasesClick} className='h-8 px-4 py-2 flex items-center justify-center cursor-pointer'>
+    <header className='flex justify-center fixed left-2/4 -translate-x-2/4 z-50 md:w-[504px] w-full'>
+        <nav className='relaive flex items-center p-2 border-1 border-[#ffffff14] bg-[#101010] md:rounded-[3rem] backdrop-blur-lg ml-auto mr-auto gap-4 w-full md:justify-start justify-between'>
+            <Link href="/" className='text-2xl pl-4 opacity-[.9] font-semibold' onClick={handleNavLinkClick}>Rikhil.</Link>
+            <ul className={`items-center md:flex ${isNavOpen ? 'flex absolute flex-col items-start top-[60px] bg-[#101010] w-full h-screen left-0 right-0' : 'hidden'}`}>
+                <button onClick={handleCasesClick} className='h-8 px-4 py-2 flex items-center justify-center cursor-pointer md:text-[16px] text-5xl md:my-0 my-10'>
                     Cases
                 </button>
-                <Link href="/about" className='h-8 px-4 py-2 flex items-center justify-center'>
+                <Link href="/about" className='h-8 px-4 py-2 flex items-center justify-center md:text-[16px] text-5xl md:my-0 my-10' onClick={handleNavLinkClick}>
                     About
                 </Link>
-                <Link href="/Rikhil_Makwana.pdf" className='h-8 px-4 py-2 flex items-center justify-center gap-2'>
+                <Link href="/Rikhil_Makwana.pdf" className='h-8 px-4 py-2 flex items-center justify-center gap-2 md:text-[16px] text-5xl md:my-0 my-10' onClick={handleNavLinkClick}>
                     Resume
                     <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg" className='mt-0.5'>
                         <mask id="mask0_5447_55667" maskUnits="userSpaceOnUse" x="0" y="0" width="17" height="17">
@@ -59,7 +65,14 @@ export default function Navbar() {
                     </svg>
                 </Link>
             </ul>
-            <Link href="mailto:rikhilmakwana06@gmail.com?subject=Hello%20Rikhil!" className='btn flex items-center justify-center border-2  border-[#007aff] bg-[#007aff] text-[#f8f8f8] rounded-[3rem] px-4 py-2'>Contact</Link>
+            <div className='md:block flex items-center gap-6 md:pr-0 pr-4'>
+              <Link href="mailto:rikhilmakwana06@gmail.com?subject=Hello%20Rikhil!" className='btn flex items-center justify-center border-2  border-[#007aff] bg-[#007aff] text-[#f8f8f8] rounded-[3rem] px-4 py-2'>Contact</Link>
+              <div className={`hambuger md:hidden cursor-pointer ${isNavOpen && 'active'}`} onClick={() => setIsNavOpen((prev) => !prev)}>
+                <span className='line'></span>
+                <span className='line'></span>
+                <span className='line'></span>
+              </div>
+            </div>
         </nav>
     </header>
   )
