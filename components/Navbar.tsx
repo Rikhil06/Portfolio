@@ -66,7 +66,7 @@ export default function Navbar() {
                 </Link>
             </div>
             <div className='md:block flex items-center gap-6 md:pr-0 pr-4'>
-              <Link href="mailto:rikhilmakwana06@gmail.com?subject=Hello%20Rikhil!" className='btn flex items-center justify-center border-2  border-[#007aff] bg-[#007aff] text-[#f8f8f8] rounded-[3rem] px-4 py-2'>Contact</Link>
+              <Link href="mailto:rikhilmakwana06@gmail.com?subject=Hello%20Rikhil!" className='btn flex items-center justify-center border-2  border-[#004FB3] bg-[#004FB3] text-[#f8f8f8] rounded-[3rem] px-4 py-2'>Contact</Link>
               <div className={`hambuger md:hidden cursor-pointer ${isNavOpen && 'active'}`} onClick={() => setIsNavOpen((prev) => !prev)}>
                 <span className='line'></span>
                 <span className='line'></span>

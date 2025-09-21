@@ -100,7 +100,7 @@ const dragOffset = useMotionValue(0);
             </motion.div>
           </motion.div>
           <div className="flex justify-center pt-12">
-            <Link href="/about" className="btn flex items-center justify-center border-2 border-[#007aff] bg-[#007aff] text-[#f8f8f8] rounded-[3rem] px-4 py-2 w-fit">Get to know me</Link>
+            <Link href="/about" className="btn flex items-center justify-center border-2 border-[#004FB3] bg-[#004FB3] text-[#f8f8f8] rounded-[3rem] px-4 py-2 w-fit">Get to know me</Link>
           </div>
         </section>
         
@@ -280,7 +280,7 @@ const dragOffset = useMotionValue(0);
 
             <p className='text-center'>*More projects and case studies available on request.</p>
             <div className="flex justify-center pt-6">
-              <Link href="mailto:rikhilmakwana06@gmail.com?subject=Hello%20Rikhil!" className="btn flex items-center justify-center border-2 border-[#007aff] bg-[#007aff] text-[#f8f8f8] rounded-[3rem] px-4 py-2 w-fit">Request</Link>
+              <Link href="mailto:rikhilmakwana06@gmail.com?subject=Hello%20Rikhil!" className="btn flex items-center justify-center border-2 border-[#004FB3] bg-[#004FB3] text-[#f8f8f8] rounded-[3rem] px-4 py-2 w-fit">Request</Link>
             </div>
           </div>
         </section>
@@ -409,7 +409,7 @@ const dragOffset = useMotionValue(0);
               <div className="p-8 text-center w-full inner-wrapper">
                 <h2 className='text-[#f8f8f8] md:text-[4rem] text-5xl font-medium'>Exploring new challenges</h2>
                 <div className="flex justify-center pt-8">
-                  <Link href="mailto:rikhilmakwana06@gmail.com?subject=Hello%20Rikhil!" className="btn flex items-center justify-center border-2 border-[#007aff] bg-[#007aff] text-[#f8f8f8] rounded-[3rem] px-4 py-2 w-fit">Contact</Link>
+                  <Link href="mailto:rikhilmakwana06@gmail.com?subject=Hello%20Rikhil!" className="btn flex items-center justify-center border-2 border-[#004FB3] bg-[#004FB3] text-[#f8f8f8] rounded-[3rem] px-4 py-2 w-fit">Contact</Link>
                 </div>
               </div>
             </div>
