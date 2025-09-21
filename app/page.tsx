@@ -189,7 +189,7 @@ const dragOffset = useMotionValue(0);
                 </Link>
               </div>
               <div className="gap-2 flex items-stretch justify-between md:flex-nowrap flex-wrap">
-                <Link href="https://www.metfilmschool.ac.uk/" target="_blank" className='p-2 border-1 border-[#ffffff14] rounded-2xl bg-[#101010 flex flex-col relative] md:w-[50%] w-full md:h-[559px] h-auto hover:w-[70%] transition-[width] duration-500 ease-in-out'>
+                <Link href="https://www.metfilmschool.ac.uk/" target="_blank" className='p-2 border-1 border-[#ffffff14] rounded-2xl bg-[#101010 flex flex-col relative] md:w-[50%] w-full md:h-[559px] h-auto md:hover:w-[70%] transition-[width] duration-500 ease-in-out'>
                   <div className="bg-[#101010] text-[#f8f8f8] rounded-xl flex flex-col h-full relative overflow-hidden">
                     <div className='w-full md:h-[559px] h-[350px] relative'>
                       <Image src='/3.png' fill alt="MetFilms School" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2"/> 
@@ -201,7 +201,7 @@ const dragOffset = useMotionValue(0);
                     </div>
                   </div>
                 </Link>
-                <Link href="/" target='_blank' className='p-2 border-1 border-[#ffffff14] rounded-2xl bg-[#101010 flex flex-col relative] md:w-[50%] w-full md:h-[559px] h-auto hover:w-[70%] transition-[width] duration-500 ease-in-out'>
+                <Link href="/" target='_blank' className='p-2 border-1 border-[#ffffff14] rounded-2xl bg-[#101010 flex flex-col relative] md:w-[50%] w-full md:h-[559px] h-auto md:hover:w-[70%] transition-[width] duration-500 ease-in-out'>
                   <div className="bg-[#101010] text-[#f8f8f8] rounded-xl flex flex-col h-full relative overflow-hidden">
                     <div className='w-full md:h-[559px] h-[350px] relative'>
                       <Image src='/8.png' fill alt="Hotpoint/Whirlpool/Indesit" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2"/> 
@@ -215,7 +215,7 @@ const dragOffset = useMotionValue(0);
                 </Link>
               </div>
               <div className="gap-2 flex items-stretch justify-between md:flex-nowrap flex-wrap">
-                 <Link href="https://www.glion.edu/" target='_blank' className='p-2 border-1 border-[#ffffff14] rounded-2xl bg-[#101010 flex flex-col relative] md:w-[50%] w-full lg:h-[390px] md:h-[480px] h-auto hover:w-[70%] transition-[width] duration-500 ease-in-out'>
+                 <Link href="https://www.glion.edu/" target='_blank' className='p-2 border-1 border-[#ffffff14] rounded-2xl bg-[#101010 flex flex-col relative] md:w-[50%] w-full lg:h-[390px] md:h-[480px] h-auto md:hover:w-[70%] transition-[width] duration-500 ease-in-out'>
                   <div className="bg-[#101010] text-[#f8f8f8] rounded-xl flex flex-col h-full relative overflow-hidden">
                     <div className='w-full md:h-[559px] h-[350px] relative'>
                       <Image src='/1.png' fill alt="Glion" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2"/> 
@@ -227,7 +227,7 @@ const dragOffset = useMotionValue(0);
                     </div>
                   </div>
                 </Link>
-                <Link href="https://www.mblseminars.com/" target="_blank" className='p-2 border-1 border-[#ffffff14] rounded-2xl bg-[#101010 flex flex-col relative] md:w-[50%] w-full lg:h-[559px] md:h-[480px] h-auto hover:w-[70%] transition-[width] duration-500 ease-in-out'>
+                <Link href="https://www.mblseminars.com/" target="_blank" className='p-2 border-1 border-[#ffffff14] rounded-2xl bg-[#101010 flex flex-col relative] md:w-[50%] w-full lg:h-[559px] md:h-[480px] h-auto md:hover:w-[70%] transition-[width] duration-500 ease-in-out'>
                   <div className="bg-[#101010] text-[#f8f8f8] rounded-xl flex flex-col h-full relative overflow-hidden">
                     <div className='w-full md:h-[559px] h-[350px] relative'>
                       <Image src='/4.png' fill alt="MBL Seminars" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2"/> 
@@ -239,7 +239,7 @@ const dragOffset = useMotionValue(0);
                     </div>
                   </div>
                 </Link>
-                <Link href="https://www.goodsalonguide.com/" target="_blank" className='p-2 border-1 border-[#ffffff14] rounded-2xl bg-[#101010 flex flex-col relative] md:w-[50%] w-full md:h-[480px] h-auto hover:w-[70%] transition-[width] duration-500 ease-in-out'>
+                <Link href="https://www.goodsalonguide.com/" target="_blank" className='p-2 border-1 border-[#ffffff14] rounded-2xl bg-[#101010 flex flex-col relative] md:w-[50%] w-full md:h-[480px] h-auto md:hover:w-[70%] transition-[width] duration-500 ease-in-out'>
                   <div className="bg-[#101010] text-[#f8f8f8] rounded-xl flex flex-col h-full relative overflow-hidden">
                     <div className='w-full md:h-[559px] h-[350px] relative'>
                       <Image src='/5.png' fill alt="Good Salon Guide" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2"/> 
@@ -253,7 +253,7 @@ const dragOffset = useMotionValue(0);
                 </Link>
               </div>
               <div className="gap-2 flex items-stretch justify-between md:flex-nowrap flex-wrap">
-                <Link href="https://www.hudgellsolicitors.co.uk/" target='_blank' className='p-2 border-1 border-[#ffffff14] rounded-2xl bg-[#101010 flex flex-col relative] md:w-[50%] w-full md:h-[450px] h-auto hover:w-[70%] transition-[width] duration-500 ease-in-out'>
+                <Link href="https://www.hudgellsolicitors.co.uk/" target='_blank' className='p-2 border-1 border-[#ffffff14] rounded-2xl bg-[#101010 flex flex-col relative] md:w-[50%] w-full md:h-[450px] h-auto md:hover:w-[70%] transition-[width] duration-500 ease-in-out'>
                   <div className="bg-[#101010] text-[#f8f8f8] rounded-xl flex flex-col h-full relative overflow-hidden">
                     <div className='w-full md:h-[559px] h-[350px] relative'>
                       <Image src='/6.png' fill alt="Hudgell's Solicitors" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2"/> 
@@ -264,7 +264,7 @@ const dragOffset = useMotionValue(0);
                     </div>
                   </div>
                 </Link>
-                <Link href="https://everyonesenergy.co.uk/" target='_blank' className='p-2 border-1 border-[#ffffff14] rounded-2xl bg-[#101010 flex flex-col relative] md:w-[50%] w-full lg:h-[599px] md:h-[450px] h-auto hover:w-[70%] transition-[width] duration-500 ease-in-out'>
+                <Link href="https://everyonesenergy.co.uk/" target='_blank' className='p-2 border-1 border-[#ffffff14] rounded-2xl bg-[#101010 flex flex-col relative] md:w-[50%] w-full lg:h-[599px] md:h-[450px] h-auto md:hover:w-[70%] transition-[width] duration-500 ease-in-out'>
                   <div className="bg-[#101010] text-[#f8f8f8] rounded-xl flex flex-col h-full relative overflow-hidden">
                     <div className='w-full md:h-[559px] h-[350px] relative'>
                       <Image src='/7.png' fill alt="Everyone's Energy" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2"/> 
