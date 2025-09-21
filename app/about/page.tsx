@@ -1,19 +1,15 @@
-import type { Metadata } from "next";
 import AboutAccordion from '@/components/AboutAccordion';
 import Link from 'next/link';
 import React from 'react'
 import { FaPlaneDeparture, FaGithub } from 'react-icons/fa';
 import Image from 'next/image';
 import { FaArrowDown } from "react-icons/fa6";
-
-export const metadata: Metadata = {
-  title: "Rikhil Makwana - About",
-  description: "Learn more about Rikhil Makwana, a London-based Full-Stack Developer with 5+ years of experience in building dynamic web applications. Explore my skills in React, Next.js, Node.js, and GraphQL, view projects, and get in touch to collaborate on innovative digital experiences.",
-};
+import Head from './head';
 
 export default function page() {
   return (
         <>
+        <Head />
           <main className='relative z-1'>
             <section className="pt-32 bg-[#080808] md:px-0 px-4">
                 <div className="max-w-[64rem] ml-auto mr-auto">

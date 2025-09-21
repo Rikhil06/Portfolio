@@ -8,7 +8,7 @@ import { motion, useMotionValue, useScroll, useTransform } from "motion/react";
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import { FaPlaneDeparture } from "react-icons/fa";
 import Accordion from '@/components/Accordion';
-import Head from 'next/head';
+import Head from './head';
 
 const noto = Noto_Serif_Display({
     weight: ["200", "300", "400", "500", "600", "700", "800"],
@@ -37,10 +37,7 @@ const dragOffset = useMotionValue(0);
 
   return (
       <>
-      <Head>
-        <title>Rikhil Makwana - Full Stack Developer</title>
-        <meta name="description" content="Rikhil Makwana | London-based Full-Stack Developer with 5+ years’ experience. Explore my web projects, download my CV, and connect to collaborate on modern, accessible digital experiences." />
-      </Head>
+      <Head />
       <motion.main ref={wrapperRef} className='relative z-1'>
           <section className="pt-32 max-w-[51rem] ml-auto mr-auto bg-[#080808] md:px-0 px-4">
             <div className="max-w-[64rem] ml-auto mr-auto">
