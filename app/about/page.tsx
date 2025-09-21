@@ -38,7 +38,7 @@ export default function page() {
                 </div>
             </section>
 
-            <section className="pt-8 bg-[#080808] md:px-0 px-4">
+            <section className="pt-8 bg-[#080808] md:px-0 px-4 md:pb-0 pb-[1px]">
                 <div className="max-w-[64rem] ml-auto mr-auto">
                     <AboutAccordion />
                 </div>
