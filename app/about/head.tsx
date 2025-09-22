@@ -23,7 +23,7 @@ export default function Head() {
       />
       <meta property="og:site_name" content="Rikhil Makwana - Portfolio" />
       <meta property="og:url" content="https://www.rikhilmakwana.co.uk/about" />
-      <meta property="og:image" content="https://www.rikhilmakwana.co.uk/og-image-about.png" />
+      <meta property="og:image" content="https://www.rikhilmakwana.co.uk/opengraph-image-about.png" />
       <meta property="og:image:width" content="867" />
       <meta property="og:image:height" content="789" />
       <meta property="og:image:type" content="image/png" />
