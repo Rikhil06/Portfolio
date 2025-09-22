@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Noto_Serif_Display } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, useMotionValue, useScroll, useTransform } from "motion/react";
+import { motion, useMotionValue, useReducedMotion, useScroll, useTransform } from "motion/react";
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import { FaPlaneDeparture } from "react-icons/fa";
 import Accordion from '@/components/Accordion';
@@ -30,6 +30,7 @@ export default function Home() {
   const rawScrollX = useTransform(scrollYProgress, [0, 1], [0, MAX_SCROLL_X]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const dragOffset = useMotionValue(0);
+  const prefersReducedMotion = useReducedMotion();
 
   useEffect(() => {
     scrollOffset.set(rawScrollX.get());
@@ -65,15 +66,29 @@ export default function Home() {
 
 
         <section className="pt-20 pb-20 w-lvw relative overflow-hidden bg-[#080808] md:px-0 px-4">
-          <motion.div style={{ x: scrollOffset }}>
+          <motion.div 
+            style={{ x: scrollOffset }} 
+            role="region"  
+            aria-label="Scrollable project gallery" 
+            tabIndex={0}
+            onKeyDown={(e) => {
+              const step = CARD_WIDTH + GAP;
+              if (e.key === "ArrowRight") {
+                scrollOffset.set(Math.max(scrollOffset.get() - step, MAX_SCROLL_X));
+              }
+              if (e.key === "ArrowLeft") {
+                scrollOffset.set(Math.min(scrollOffset.get() + step, 0));
+              }
+            }}
+          >
             <motion.div 
               className="gap-y-2 gap-x-2 flex items-center justify-items-start w-max cursor-grab active:cursor-grabbing touch-none" 
               style={{ x: dragOffset }}
               drag="x"
               dragListener={true}
-              dragMomentum={true}
+              dragMomentum={!prefersReducedMotion}
               dragConstraints={{ left: MAX_SCROLL_X, right: 0 }}
-              dragElastic={0.15}
+              dragElastic={prefersReducedMotion ? 0 : 0.15}
               dragTransition={{ bounceStiffness: 300, bounceDamping: 20 }}
               onDragStart={() => { document.body.style.userSelect = 'none'; }}
               onDragEnd={() => { document.body.style.userSelect = ''; }}
