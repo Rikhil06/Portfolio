@@ -3,6 +3,8 @@ export default function Head() {
     <>
       <link rel="canonical" href="https://www.rikhilmakwana.co.uk/" />
       <link rel="icon" href="/favicon.ico" sizes="any" />
+      <link rel="icon" href="/favicon-32x32.png" sizes="32x32" />
+      <link rel="icon" href="/android-chrome-192x192.png" sizes="192x192" />
       <link rel="apple-touch-icon" href="/apple-touch-icon.png" type="image/<generated>" sizes="<generated>" />
       <title>Rikhil Makwana – Full Stack Developer</title>
       <meta
