@@ -13,7 +13,7 @@ export default function page() {
           <main className='relative z-1'>
             <section className="pt-32 bg-[#080808] md:px-0 px-4">
                 <div className="max-w-[64rem] ml-auto mr-auto">
-                    <div className="flex flex-wrap items-center about-hero">
+                    <div className="flex flex-wrap items-center about-hero rounded-2xl">
                         <div className="md:w-3/5 p-8">
                             <h1 className='text-5xl leading-16 font-medium pb-4 text-[#f8f8f8]'>Full Stack Developer</h1>
                             <p className='leading-6'>Creative and detail-oriented Full-Stack Developer with 5+ years of experience in building dynamic, scalable, and user-focused
