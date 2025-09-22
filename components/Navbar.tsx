@@ -2,7 +2,6 @@ import { animate } from 'motion/react';
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import { RxHamburgerMenu } from "react-icons/rx";
 
 
 export default function Navbar() {
