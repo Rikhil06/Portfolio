@@ -12,9 +12,6 @@ export default function Head() {
         content="Learn more about Rikhil Makwana, a London-based Full-Stack Developer with 5+ years of experience in building dynamic web applications. Explore my skills in React, Next.js, Node.js, and GraphQL, view projects, and get in touch to collaborate on innovative digital experiences."
       />
 
-      {/* Google Search Console Verification */}
-      <meta name="google-site-verification" content="UN44L2hitLOTV5TFyz40tnMJLy2ib2W9CogUzpqn3Jk" />
-
       {/* Open Graph */}
       <meta property="og:locale" content="en_GB" />
       <meta property="og:type" content="website" />
