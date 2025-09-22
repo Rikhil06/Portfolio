@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Noto_Serif_Display } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,6 +9,7 @@ import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import { FaPlaneDeparture } from "react-icons/fa";
 import Accordion from '@/components/Accordion';
 import Head from './head';
+import { IoArrowForward, IoClose } from "react-icons/io5";
 
 const noto = Noto_Serif_Display({
     weight: ["400"],
@@ -26,6 +27,7 @@ export default function Home() {
   const MAX_SCROLL_X = -(TOTAL_CARDS_WIDTH - VIEWPORT_WIDTH);
   const scrollOffset = useMotionValue(0);
   const rawScrollX = useTransform(scrollYProgress, [0, 1], [0, MAX_SCROLL_X]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     scrollOffset.set(rawScrollX.get());
@@ -34,6 +36,8 @@ export default function Home() {
   }, [rawScrollX, scrollOffset]);
 
 const dragOffset = useMotionValue(0);
+
+  console.log(isModalOpen);
 
   return (
       <>
@@ -201,8 +205,8 @@ const dragOffset = useMotionValue(0);
                     </div>
                   </div>
                 </Link>
-                <Link href="/" target='_blank' className='p-2 border-1 border-[#ffffff14] rounded-2xl bg-[#101010 flex flex-col relative] md:w-[50%] w-full md:h-[559px] h-auto md:hover:w-[70%] transition-[width] duration-500 ease-in-out'>
-                  <div className="bg-[#101010] text-[#f8f8f8] rounded-xl flex flex-col h-full relative overflow-hidden">
+                <div className={`cursor-pointer relative p-2 border-1 border-[#ffffff14] rounded-2xl bg-[#101010 flex flex-col relative] ${isModalOpen ? '' : 'md:hover:w-[70%]'} md:w-[50%] w-full md:h-[559px] h-auto  transition-[width] duration-500 ease-in-out`}>
+                  <div className="bg-[#101010] text-[#f8f8f8] rounded-xl flex flex-col h-full relative overflow-hidden" onClick={() => setIsModalOpen(true)}>
                     <div className='w-full md:h-[559px] h-[350px] relative'>
                       <Image src='/8.png' fill alt="Hotpoint/Whirlpool/Indesit" className="p-2 object-cover rounded-2xl border-2 border-[#ffffff14] aspect-3/2"/> 
                     </div>
@@ -212,7 +216,28 @@ const dragOffset = useMotionValue(0);
                       <p>Three Sites, One Goal: Speed and Performance Through a Next Gen Tech Stack</p>
                     </div>
                   </div>
-                </Link>
+                  {isModalOpen && (
+                    <motion.div 
+                      className="bg-[#101010] absolute inset-0 w-[300px] h-[220px] z-40 left-2/4 -translate-2/4 top-2/4 rounded-xl border-1 border-[#ffffff14] p-2"
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.8 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <div className="bg-[#101010] rounded-xl flex flex-col justify-between border-1 border-[#ffffff14] h-full p-3">
+                        <div className='flex justify-between items-center pr-2 pb-2'>
+                          <div>Pick a site</div>
+                          <button onClick={() => setIsModalOpen(false)}>
+                            <IoClose className='cursor-pointer' size={20}/>
+                          </button>
+                        </div>
+                        <Link href="https://hotpointservice.ie/" target='_blank' className='bg-[#ffffff14] rounded-lg p-2 flex items-center justify-between mb-3'>Hotpoint <IoArrowForward className='-rotate-45' /></Link>
+                        <Link href="https://whirlpoolservice.co.uk/" target='_blank' className='bg-[#ffffff14] rounded-lg p-2 flex items-center justify-between mb-3'>Whirlpool <IoArrowForward className='-rotate-45' /></Link>
+                        <Link href="https://indesitservice.co.uk/" target='_blank' className='bg-[#ffffff14] rounded-lg p-2 flex items-center justify-between mb-3'>Indesit <IoArrowForward className='-rotate-45' /></Link>
+                      </div>
+                    </motion.div>
+                  )}
+                </div>
               </div>
               <div className="gap-2 flex items-stretch justify-between md:flex-nowrap flex-wrap">
                  <Link href="https://www.glion.edu/" target='_blank' className='p-2 border-1 border-[#ffffff14] rounded-2xl bg-[#101010 flex flex-col relative] md:w-[50%] w-full lg:h-[390px] md:h-[480px] h-auto md:hover:w-[70%] transition-[width] duration-500 ease-in-out'>
