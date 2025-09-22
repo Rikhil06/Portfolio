@@ -4,6 +4,9 @@
 body {
   background: #080808;
   color: #cac9c9;
+  transition-property: opacity, background, transform, filter;
+  transition-timing-function: ease-in-out;
+  transition-duration: 500ms;
 }
 
 p{
@@ -94,4 +97,11 @@ p{
 }
 .bubble3 {
   animation: drop 6s ease-in-out infinite;
+}
+
+.page-transition{
+  opacity: 0;
+  background: #080808;
+  transform: translateY(40px);
+  filter: blur(12px);
 }

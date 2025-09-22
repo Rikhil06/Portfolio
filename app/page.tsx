@@ -10,6 +10,7 @@ import { FaPlaneDeparture } from "react-icons/fa";
 import Accordion from '@/components/Accordion';
 import Head from './head';
 import { IoArrowForward, IoClose } from "react-icons/io5";
+import TransitionLink from '@/components/utils/TransitionLink';
 
 const noto = Noto_Serif_Display({
     weight: ["400"],
@@ -28,6 +29,7 @@ export default function Home() {
   const scrollOffset = useMotionValue(0);
   const rawScrollX = useTransform(scrollYProgress, [0, 1], [0, MAX_SCROLL_X]);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const dragOffset = useMotionValue(0);
 
   useEffect(() => {
     scrollOffset.set(rawScrollX.get());
@@ -35,9 +37,6 @@ export default function Home() {
     return () => unsub();
   }, [rawScrollX, scrollOffset]);
 
-const dragOffset = useMotionValue(0);
-
-  console.log(isModalOpen);
 
   return (
       <>
@@ -112,7 +111,7 @@ const dragOffset = useMotionValue(0);
             </motion.div>
           </motion.div>
           <div className="flex justify-center pt-12">
-            <Link href="/about" className="btn flex items-center justify-center border-2 border-[#004FB3] bg-[#004FB3] text-[#f8f8f8] rounded-[3rem] px-4 py-2 w-fit">Get to know me</Link>
+            <TransitionLink href="/about" className="btn flex items-center justify-center border-2 border-[#004FB3] bg-[#004FB3] text-[#f8f8f8] rounded-[3rem] px-4 py-2 w-fit">Get to know me</TransitionLink>
           </div>
         </section>
         

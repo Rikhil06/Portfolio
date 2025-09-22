@@ -2,6 +2,7 @@ import { animate } from 'motion/react';
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import TransitionLink from './utils/TransitionLink';
 
 
 export default function Navbar() {
@@ -44,14 +45,14 @@ export default function Navbar() {
   return (
     <header className='flex justify-center fixed left-2/4 -translate-x-2/4 z-50 md:w-[520px] w-full'>
         <nav className='relaive flex items-center p-2 border-1 border-[#ffffff14] bg-[#101010] md:rounded-[3rem] backdrop-blur-lg ml-auto mr-auto gap-4 w-full md:justify-start justify-between'>
-            <Link href="/" className='text-2xl pl-4 opacity-[.9] font-semibold' onClick={handleNavLinkClick}>Rikhil.</Link>
+            <TransitionLink href="/" className='text-2xl pl-4 opacity-[.9] font-semibold' onClick={handleNavLinkClick}>Rikhil.</TransitionLink>
             <div className={`items-center md:flex ${isNavOpen ? 'flex absolute flex-col items-start top-[60px] bg-[#101010] w-full h-screen left-0 right-0' : 'hidden'}`}>
                 <button onClick={handleCasesClick} className='h-8 px-4 py-2 flex items-center justify-center cursor-pointer md:text-[16px] text-5xl md:my-0 my-10'>
                     Projects
                 </button>
-                <Link href="/about" className='h-8 px-4 py-2 flex items-center justify-center md:text-[16px] text-5xl md:my-0 my-10' onClick={handleNavLinkClick}>
+                <TransitionLink href="/about" className='h-8 px-4 py-2 flex items-center justify-center md:text-[16px] text-5xl md:my-0 my-10' onClick={handleNavLinkClick}>
                     About
-                </Link>
+                </TransitionLink>
                 <Link href="https://drive.google.com/file/d/1lkXiKm4sjx8mag2dFhZSJKctZ4WgtLFP/view?usp=sharing" target="_blank" className='h-8 px-4 py-2 flex items-center justify-center gap-2 md:text-[16px] text-5xl md:my-0 my-10' onClick={handleNavLinkClick}>
                     Resume
                     <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg" className='mt-0.5'>
