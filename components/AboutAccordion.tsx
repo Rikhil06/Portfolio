@@ -90,7 +90,7 @@ export default function AboutAccordion() {
               aria-expanded={isOpen}
               aria-controls={contentId}
               onClick={() => toggleAccordion(item.id)}
-              className="flex justify-between items-center w-full py-5 text-[#f8f8f8] text-4xl font-medium cursor-pointer px-8"
+              className="flex justify-between items-center w-full py-5 text-[#f8f8f8] text-4xl font-medium cursor-pointer px-8 text-left"
             >
               <h2>{item.title}</h2>
               <motion.div
