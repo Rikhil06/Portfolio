@@ -10,6 +10,9 @@ export default function Head() {
         content="London-based Full-Stack Developer Rikhil Makwana crafts modern web apps with React, Next.js, and Node.js. Let’s build seamless digital experiences."
       />
 
+      {/* Google Search Console Verification */}
+      <meta name="google-site-verification" content="UN44L2hitLOTV5TFyz40tnMJLy2ib2W9CogUzpqn3Jk" />
+
       {/* Open Graph */}
       <meta property="og:locale" content="en_GB" />
       <meta property="og:type" content="website" />
