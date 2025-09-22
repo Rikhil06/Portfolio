@@ -25,14 +25,10 @@ export default function TransitionLink({
         if (onClick) onClick(e);
         e.preventDefault();
 
-        console.log('here');
-
         const body = document.querySelector('body');
         body?.classList.add('page-transition');
         await sleep(500);
-
         router.push(href);
-
         await sleep(500);
         body?.classList.remove('page-transition');
     }
