@@ -47,7 +47,7 @@ export default function Navbar() {
             <Link href="/" className='text-2xl pl-4 opacity-[.9] font-semibold' onClick={handleNavLinkClick}>Rikhil.</Link>
             <div className={`items-center md:flex ${isNavOpen ? 'flex absolute flex-col items-start top-[60px] bg-[#101010] w-full h-screen left-0 right-0' : 'hidden'}`}>
                 <button onClick={handleCasesClick} className='h-8 px-4 py-2 flex items-center justify-center cursor-pointer md:text-[16px] text-5xl md:my-0 my-10'>
-                    Cases
+                    Projects
                 </button>
                 <Link href="/about" className='h-8 px-4 py-2 flex items-center justify-center md:text-[16px] text-5xl md:my-0 my-10' onClick={handleNavLinkClick}>
                     About
