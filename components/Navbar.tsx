@@ -42,7 +42,7 @@ export default function Navbar() {
 
   const handleNavLinkClick = () => setIsNavOpen(false);
   return (
-    <header className='flex justify-center fixed left-2/4 -translate-x-2/4 z-50 md:w-[504px] w-full'>
+    <header className='flex justify-center fixed left-2/4 -translate-x-2/4 z-50 md:w-[520px] w-full'>
         <nav className='relaive flex items-center p-2 border-1 border-[#ffffff14] bg-[#101010] md:rounded-[3rem] backdrop-blur-lg ml-auto mr-auto gap-4 w-full md:justify-start justify-between'>
             <Link href="/" className='text-2xl pl-4 opacity-[.9] font-semibold' onClick={handleNavLinkClick}>Rikhil.</Link>
             <div className={`items-center md:flex ${isNavOpen ? 'flex absolute flex-col items-start top-[60px] bg-[#101010] w-full h-screen left-0 right-0' : 'hidden'}`}>
