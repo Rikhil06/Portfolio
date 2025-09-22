@@ -46,7 +46,15 @@ const dragOffset = useMotionValue(0);
           <section className="pt-32 max-w-[51rem] ml-auto mr-auto bg-[#080808] md:px-0 px-4">
             <div className="max-w-[64rem] ml-auto mr-auto">
               <div className="flex items-center flex-col text-center">
-                <p className={`${noto.className} text-sm !italic`}>Full-Stack Developer & Problem Solver</p>
+                <div className='flex gap-4'>
+                  <p className={`${noto.className} text-sm !italic`}>Full-Stack Developer & Problem Solver</p>
+                  <div className="relative w-[60px] h-5 bg-black overflow-hidden">
+                    <div className="bubble absolute top-0 left-[15px] w-2.5 h-2.5 rounded-full bg-gradient-to-b from-[#e64980] to-[#ff8787]"></div>
+                    <div className="bubble1 absolute top-0 left-[1px] w-2.5 h-2.5 rounded-full bg-gradient-to-b from-[#82c91e] to-[#3bc9db]"></div>
+                    <div className="bubble2 absolute top-0 left-[30px] w-2.5 h-2.5 rounded-full bg-gradient-to-b from-[#7950f2] to-[#f783ac]"></div>
+                    <div className="bubble3 absolute top-0 left-[20px] w-2.5 h-2.5 rounded-full bg-gradient-to-b from-[#4481eb] to-[#04befe]"></div>
+                  </div>
+                </div>
                 <h1 className="md:text-[4rem] text-5xl font-medium md:leading-[4.5rem] leading-14 text-[#f8f8f8] pb-4">Crafting fast, scalable, and user-friendly digital solutions.</h1>
                 <p>
                   5+ years crafting modern websites and apps with React, Next.js, Node.js, and WordPress.

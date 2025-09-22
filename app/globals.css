@@ -71,3 +71,27 @@ p{
   transition-delay: 0.3s;
 }
 
+@keyframes drop {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(80px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.bubble {
+  animation: drop 5s ease-in-out infinite;
+}
+.bubble1 {
+  animation: drop 3s ease-in-out infinite;
+}
+.bubble2 {
+  animation: drop 4s ease-in-out infinite;
+}
+.bubble3 {
+  animation: drop 6s ease-in-out infinite;
+}
