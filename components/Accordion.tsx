@@ -48,26 +48,35 @@ export default function Accordion() {
     <div>
       {accordionData.map((item) => {
         const isOpen = openId === item.id;
+        const contentId = `accordion-panel-${item.id}`;
+        const buttonId = `accordion-button-${item.id}`;
+
         return (
           <div
             key={item.id}
           >
-            <h3
+            <button
+              id={buttonId}
+              aria-expanded={isOpen}
+              aria-controls={contentId}
               onClick={() => toggleAccordion(item.id)}
               className="flex justify-between items-center w-full font-normal px-6 py-4 text-[#cac9c9] text-xl cursor-pointer"
             >
-              {item.title}
+              <h3>{item.title}</h3>
               <motion.div
                 animate={{ rotate: isOpen ? 180 : 0 }}
                 transition={{ duration: 0.25 }}
               >
-                <IoIosArrowDown color="#cac9c9" />
+                <IoIosArrowDown color="#cac9c9" aria-hidden="true" />
               </motion.div>
-            </h3>
+            </button>
 
             <AnimatePresence initial={false}>
               {isOpen && (
                 <motion.div
+                  id={contentId}
+                  role="region"
+                  aria-labelledby={buttonId}
                   key="content"
                   initial={{ height: 0, opacity: 0 }}
                   animate={{ height: "auto", opacity: 1 }}

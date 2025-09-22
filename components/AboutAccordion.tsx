@@ -77,33 +77,42 @@ export default function AboutAccordion() {
     <div>
       {accordionData.map((item) => {
         const isOpen = openId === item.id;
+        const contentId = `accordion-panel-${item.id}`;
+        const buttonId = `accordion-button-${item.id}`;
+
         return (
           <div
             key={item.id}
-            className="bg-[#101010] px-8 rounded-2xl mb-2 border-1 border-[#ffffff14]"
+            className="bg-[#101010] rounded-2xl mb-2 border-1 border-[#ffffff14]"
           >
-            <h2
+            <button
+              id={buttonId}
+              aria-expanded={isOpen}
+              aria-controls={contentId}
               onClick={() => toggleAccordion(item.id)}
-              className="flex justify-between items-center w-full py-5 text-[#f8f8f8] text-4xl font-medium cursor-pointer"
+              className="flex justify-between items-center w-full py-5 text-[#f8f8f8] text-4xl font-medium cursor-pointer px-8"
             >
-              {item.title}
+              <h2>{item.title}</h2>
               <motion.div
                 animate={{ rotate: isOpen ? 45 : 0 }}
                 transition={{ duration: 0.25 }}
               >
-                <FiPlus color="#cac9c9" />
+                <FiPlus color="#cac9c9" aria-hidden="true" />
               </motion.div>
-            </h2>
+            </button>
 
             <AnimatePresence initial={false}>
               {isOpen && (
                 <motion.div
+                  id={contentId}
+                  role="region"
+                  aria-labelledby={buttonId}
                   key="content"
                   initial={{ height: 0, opacity: 0 }}
                   animate={{ height: "auto", opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}
                   transition={{ duration: 0.3, ease: "easeInOut" }}
-                  className="overflow-hidden"
+                  className="overflow-hidden px-8"
                 >
                     <div className="text-left rounded-xl py-4">
                                       {Array.isArray(item.content) ? (
