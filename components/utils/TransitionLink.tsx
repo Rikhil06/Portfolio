@@ -29,6 +29,7 @@ export default function TransitionLink({
         body?.classList.add('page-transition');
         await sleep(500);
         router.push(href);
+        window.scrollTo({ top: 0, left: 0, behavior: "instant" });
         await sleep(500);
         body?.classList.remove('page-transition');
     }
